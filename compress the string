@@ -1,0 +1,11 @@
+import re
+s = input()
+pattern = r'(\d)(\1*)'
+occurences = re.findall(pattern, s)
+
+for i in occurences:
+    join = ''.join(i)
+    num = int(join[0])
+    repeats = len(join)
+    tup = (repeats, num)
+    print(tup, end =  ' ')
